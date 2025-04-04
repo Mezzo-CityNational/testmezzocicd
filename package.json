@@ -1,7 +1,7 @@
 {
   "name": "simple-docker-app",
   "version": "1.0.0",
-  "description": "A simple Node.js app for Docker deployment",
+  "description": "An simple Node.js app for Docker deployment",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
