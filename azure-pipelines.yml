@@ -29,7 +29,7 @@ steps:
       connectionType: 'Kubernetes Service Connection'
       kubernetesServiceEndpoint: 'test1'
       command: 'apply'
-      arguments: '-f k8s/deployment.yml'
+      arguments: '-f deployment.yml'
       secretType: 'dockerRegistry'
       containerRegistryType: 'Azure Container Registry'
 
@@ -39,7 +39,7 @@ steps:
       connectionType: 'Kubernetes Service Connection'
       kubernetesServiceEndpoint: 'test1'
       command: 'apply'
-      arguments: '-f k8s/service.yaml'
+      arguments: '-f service.yaml'
       secretType: 'dockerRegistry'
       containerRegistryType: 'Azure Container Registry'
 
