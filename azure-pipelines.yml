@@ -16,7 +16,7 @@ steps:
   - task: Docker@2
     inputs:
       command: 'login'
-      containerRegistry: 'acrnew'
+      containerRegistry: 'acr'
 
   - task: Docker@2
     inputs:
