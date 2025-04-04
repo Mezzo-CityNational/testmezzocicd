@@ -27,7 +27,7 @@ steps:
   - task: Kubernetes@1
     inputs:
       connectionType: 'Kubernetes Service Connection'
-      kubernetesServiceEndpoint: 'test1'
+      kubernetesServiceEndpoint: 'test'
       command: 'apply'
       arguments: '-f deployment.yaml'
       secretType: 'dockerRegistry'
@@ -37,7 +37,7 @@ steps:
   - task: Kubernetes@1
     inputs:
       connectionType: 'Kubernetes Service Connection'
-      kubernetesServiceEndpoint: 'test1'
+      kubernetesServiceEndpoint: 'test'
       command: 'apply'
       arguments: '-f service.yaml'
       secretType: 'dockerRegistry'
@@ -47,7 +47,7 @@ steps:
   - task: Kubernetes@1
     inputs:
       connectionType: 'Kubernetes Service Connection'
-      kubernetesServiceEndpoint: 'test1'
+      kubernetesServiceEndpoint: 'test'
       command: 'set'
       arguments: 'image deployment/myapp-deployment myapp=$(ACR_NAME).azurecr.io/$(IMAGE_NAME):$(IMAGE_TAG)'
       secretType: 'dockerRegistry'
