@@ -6,7 +6,7 @@ pool:
 
 variables:
   ACR_NAME: 'mezzodevprojectacr'
-  IMAGE_NAME: 'mezzodevprojectacr/myapp'
+  IMAGE_NAME: 'myapp'
   RESOURCE_GROUP: 'CNB_DEV'
   AKS_CLUSTER_NAME: 'mezzo-dev-aks-cluster'  # Your AKS cluster name
   IMAGE_TAG: 'latest'  # Image tag, usually 'latest'
@@ -49,7 +49,7 @@ steps:
       connectionType: 'Kubernetes Service Connection'
       kubernetesServiceEndpoint: 'test-default'
       command: 'set'
-      arguments: 'image deployment/myapp-deployment myapp=$(ACR_NAME).azurecr.io/$(IMAGE_NAME):$(IMAGE_TAG)'
+      arguments: 'image deployment/myapp-deployment myapp=$(ACR_NAME).azurecr.io/$(ACR_NAME)/$(IMAGE_NAME):$(IMAGE_TAG)'
       secretType: 'dockerRegistry'
       containerRegistryType: 'Azure Container Registry'
 
