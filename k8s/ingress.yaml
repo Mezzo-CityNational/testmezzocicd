@@ -10,10 +10,10 @@ spec:
     - host: mezzo-development-api.experionglobal.dev
       http:
         paths:
-          - path: /api/pricing/scenario
+          - path: /
             pathType: Prefix
             backend:
               service:
-                name: core-service
+                name: my-app
                 port:
                   number: 80
